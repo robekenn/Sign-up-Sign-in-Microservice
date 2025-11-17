@@ -30,13 +30,13 @@ while True:
     if message[0] == 1:
           # Sign-in
           print("signin")
-          retMessage = sign_in(message[1], message[2], data) #Sends the username and password
+          retMessage = sign_in.sign_in(message[1], message[2], data) #Sends the username and password
           socket.send_string(retMessage)
           JDump(data)
     elif message[0] == 2:
           #Sign-up
           print("Signup")
-          retMessage = sign_up(message[1], message[2], data)#Sends the username and password
+          retMessage = sign_up.sign_up(message[1], message[2], data)#Sends the username and password
           socket.send_string(retMessage)
           JDump(data)
     elif message[0] == 3:

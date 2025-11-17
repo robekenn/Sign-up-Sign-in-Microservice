@@ -14,15 +14,15 @@ socket.connect("tcp://localhost:5558")
 
 #request with serilization
 
-#siReq = [1, "Jane_doe", "coolerpassword"]
-#serialized_list_json = json.dumps(siReq).encode('utf-8')
+siReq = [1, "jane_doe", "coolerpassword"]
+serialized_list_json = json.dumps(siReq).encode('utf-8')
 
 # send to the server
-#socket.send(serialized_list_json)
+socket.send(serialized_list_json)
 
 #receive responce
-#message = socket.recv()
-#print(message)
+message = socket.recv()
+print(message)
 
 # -- END TEST SIGN IN -- 
 
@@ -30,16 +30,16 @@ socket.connect("tcp://localhost:5558")
 # -- TEST SIGN UP --
 
 #request with serilization
-#siReq = [2, "Juan", "thebestpass"]
-#serialized_list_json = json.dumps(siReq).encode('utf-8')
+siReq = [2, "Juan", "thebestpass"]
+serialized_list_json = json.dumps(siReq).encode('utf-8')
 
 # send to the server
-#socket.send(serialized_list_json)
+socket.send(serialized_list_json)
 
 
 #receive responce
-#message = socket.recv()
-#print(message)
+message = socket.recv()
+print(message)
 
 # -- END TEST SIGN UP --
 

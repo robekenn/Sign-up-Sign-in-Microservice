@@ -5,7 +5,7 @@ def sign_in(username, password, data):
 
     # Check database
     for user in data.get("users", []):
-        if user.get("username") == username and user.get(password) == password:
+        if user.get("username") == username and user.get("password") == password:
             return user.get("id")
     
     # Not match
