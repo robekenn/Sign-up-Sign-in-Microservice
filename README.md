@@ -32,9 +32,14 @@ Sign-In:
 
 Sign-Up:
 
+
 Delete-User:
 The Server will return a "OK" or "ERROR".
 ```
 #receive responce
 message = socket.recv()
 ```
+
+
+<img width="1191" height="473" alt="Screenshot 2025-11-17 at 1 51 36 PM" src="https://github.com/user-attachments/assets/ef8e2ada-193e-4c2f-851c-6ff1e871913f" />
+
