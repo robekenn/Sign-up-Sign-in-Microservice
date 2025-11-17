@@ -1,6 +1,8 @@
 import deleteU
 import zmq
 import json
+import sign_in
+import sign_up
 
 def JDump(data):
     with open("data.json", 'w') as f:
@@ -28,15 +30,15 @@ while True:
     if message[0] == 1:
           # Sign-in
           print("signin")
-          #retMessage = sign_in(message[1], message[2])#Sends the username and password
-          #socket.send(retMessage)
-          #JDump(data)
+          retMessage = sign_in(message[1], message[2], data) #Sends the username and password
+          socket.send_string(retMessage)
+          JDump(data)
     elif message[0] == 2:
           #Sign-up
           print("Signup")
-          #retMessage = sign_up(message[1], message[2])#Sends the username and password
-          #socket.send(retMessage)
-          #JDump(data)
+          retMessage = sign_up(message[1], message[2], data)#Sends the username and password
+          socket.send_string(retMessage)
+          JDump(data)
     elif message[0] == 3:
           #Delete User
           retMessage = deleteU.delete_user(message[1], data)
