@@ -1,0 +1,19 @@
+{
+    "users": [
+        {
+            "id": "user_001",
+            "username": "john_doe",
+            "password": "coolpassword"
+        },
+        {
+            "id": "user_002",
+            "username": "jane_doe",
+            "password": "coolerpassword"
+        },
+        {
+            "id": "user_003",
+            "username": "Jimmy",
+            "password": "boomPass"
+        }
+    ]
+}
