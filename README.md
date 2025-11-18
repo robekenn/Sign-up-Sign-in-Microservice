@@ -10,8 +10,18 @@ socket.connect("tcp://localhost:5558")
 
 Requesting:
 Sign-In:
+request = [1, "jane_doe", "coolerpassword"]
+
+serialized_list_json = json.dumps(siReq).encode("utf-8")
+
+socket.send(serialized_list_json)
 
 Sign-Up:
+request = [2, "Juan", "thebestpass"]
+
+serialized_list_json = json.dumps(siReq).encode("utf-8")
+
+socket.send(serialized_list_json)
 
 Delete-User:
 The delete-user function will be called if the server recieves a JSON object that contains a list [3 (the protocal for delete-user), userID]
