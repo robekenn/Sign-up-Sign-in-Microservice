@@ -106,12 +106,11 @@ message = socket.recv()
 ## Team Contribution
 ### Kenneth Robertson
 * Implemented the server.py core structure.
-* Completed the delete_user function in the server.
-* Wrote the testClient for demonstrating delete-user requests.
+* Implemented the delete_user function in the server.
+* Wrote the testClient for demonstrating all requests.
 * Created the initial README framework, including layout and sections, and Delete-User part.
 
 ### Zhicheng Huang
 * Implemented the sign-in and sign-up functions in the server.
 * Wrote the sign-in and sign-up part in the README.
 * Improved the README overall style, including formatting, clarity, and consistency across all microservices.
-* Make the video.
