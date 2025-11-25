@@ -26,6 +26,7 @@ serialized_list_json = json.dumps(siReq).encode("utf-8")
 # send to the server
 socket.send(serialized_list_json)
 ```
+
 ### Sign-Up:
 
 For sign-up, client will send a JSON list
@@ -99,6 +100,69 @@ The Server will return
 #receive responce
 message = socket.recv()
 ```
+
+## Example Server Outputs
+
+### Sign-In:
+
+**Successful Sign-In:**
+```ruby
+#Input Request
+[1, "jane_doe", "coolerpassword"]
+
+# Possible Server Response
+"user_002"
+```
+
+**Failed Sign-In:**
+```ruby
+#Input Request
+[1, "wrongname", "wrongpass"]
+
+# Possible Server Response
+"NA"
+```
+
+### Sign-Up:
+
+**Successful Sign-Up:**
+```ruby
+#Input Request
+[2, "Juan", "thebestpass"]
+
+# Possible Server Response
+"user_003"
+```
+
+**Failed Sign-Up:**
+```ruby
+#Input Request
+[2, "Invalid Username!!", "abc123"]
+
+# Possible Server Response
+"NA"
+```
+
+### Delete-User:
+
+**Successful Deletion:**
+```ruby
+#Input Request
+[3, "user_001"]
+
+# Possible Server Response
+"OK"
+```
+
+**Failed Deletion:**
+```ruby
+#Input Request
+[3, "user_999"]
+
+# Possible Server Response
+"ERROR NO USERS DELETED"
+```
+
 
 ## UML Diagram
 <img width="1191" height="473" alt="Screenshot 2025-11-17 at 1 51 36 PM" src="https://github.com/user-attachments/assets/ef8e2ada-193e-4c2f-851c-6ff1e871913f" />
